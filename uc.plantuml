@@ -1,15 +1,26 @@
 @startuml issue1
 
-usecase r as "Recenser les \n demandes de stage"
-usecase d as "Déclarer une \n demande de stage"
+usecase c as "Gérer ses chantiers"
+usecase g as "Gérer ses artisans"
+usecase a as "Affectation des artisans"
+usecase p as "Payer les artisans"
 
-actor Responsable
-actor Entreprise 
+actor Direction
+actor RessourcesHumaines
+actor Comptable
 
 'Pour aligner les 2 acteurs :
-r -[hidden]-> d
+a -[hidden]-> g
+p -[hidden]-> a
 
-Responsable -> r
-Entreprise -> d
+Direction -> c
+Direction -> a
+
+RessourcesHumaines -> g
+
+
+Comptable -> p
+
+
 
 @enduml
