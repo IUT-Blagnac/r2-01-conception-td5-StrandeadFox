@@ -1,4 +1,4 @@
-@startuml
+@startuml issue1
 
 usecase r as "Recenser les \n demandes de stage"
 usecase d as "Déclarer une \n demande de stage"
